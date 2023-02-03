@@ -11,7 +11,7 @@ TagManager:
   - 
   - Water
   - UI
-  - 
+  - No post layer
   - 
   - 
   - 
@@ -38,6 +38,18 @@ TagManager:
   - 
   - 
   m_SortingLayers:
+  - name: BackgroundPlane
+    uniqueID: 4019059047
+    locked: 0
+  - name: Background
+    uniqueID: 583294589
+    locked: 0
   - name: Default
     uniqueID: 0
+    locked: 0
+  - name: Foreground
+    uniqueID: 879173811
+    locked: 0
+  - name: ForegroundFront
+    uniqueID: 150476421
     locked: 0
