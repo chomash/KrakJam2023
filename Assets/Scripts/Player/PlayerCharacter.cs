@@ -18,9 +18,9 @@ public class PlayerCharacter : MonoBehaviour //Mover has update Animation functi
     public bool isGrounded;
     protected Vector3 baseScale; //just for rotation
     protected Animator animator;
-    private float moveButton, jumpButton;
+    private float moveButton;
     [SerializeField] private float maxSpeed = 7f;
-    [HideInInspector]public bool inAir = false, isMoving = true/*, canJump = true*/;
+    [HideInInspector]public bool inAir = false, isMoving = true;
     #endregion
 
 
@@ -37,15 +37,18 @@ public class PlayerCharacter : MonoBehaviour //Mover has update Animation functi
         Debug.Log("name");
     }
 
-    protected void FixedUpdate()
+    protected void Update()
     {
+        if (Input.GetKeyDown(KeyCode.Space) && isGrounded)
+        {
+            Jump();
+        }
         if (isMoving)
         {
             moveButton = Input.GetAxisRaw("Horizontal");
-            jumpButton = Input.GetAxisRaw("Jump");
             Movement();
-            Jump();
         }
+        
 
         AnimationUpdate();
     }
@@ -109,9 +112,10 @@ public class PlayerCharacter : MonoBehaviour //Mover has update Animation functi
     {
         if (!inAir)
         {
-            rigidBody.AddForce(new Vector2(0, jumpForce * jumpButton), ForceMode2D.Impulse);
             inAir = true;
             isGrounded = false;
+            rigidBody.AddForce(new Vector2(0, jumpForce * 1), ForceMode2D.Impulse);
+            
 
         }
     }
@@ -141,16 +145,14 @@ public class PlayerCharacter : MonoBehaviour //Mover has update Animation functi
         if (inAir)
         {
             animator.SetBool("isGrounded", false);
-            
-            if(moveDelta.y > 0)
+
+            if (moveDelta.y > 0)
             {
                 animator.SetBool("isJumping", true);
-                animator.SetBool("isFalling", false);
             }
-            else if (moveDelta.y < 0)
+            else
             {
                 animator.SetBool("isJumping", false);
-                animator.SetBool("isFalling", true);
             }
         }
 
