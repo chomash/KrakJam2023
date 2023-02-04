@@ -12,5 +12,6 @@ public class AvatarList : ScriptableObject
 public class AvatarEntry
 {
     public string avatarName;
+    public bool isMain = false;
     public Sprite avatarImage;
 }

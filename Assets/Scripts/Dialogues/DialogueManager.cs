@@ -8,9 +8,8 @@ public class DialogueManager : MonoBehaviour
 {
     public static DialogueManager instance { get; private set; }
 
-
-    public Image avatarOne, avatarTwo;
-    public  TMP_Text nameOne, nameTwo, spokenText;
+    public TMP_Text spokenText;
+    public GameObject avatar1, avatar2, dialogContainer;
     [SerializeField] private AvatarList avatarList;
 
     public Queue<DialogueEntry> dialogueEntries { get; private set; }
@@ -30,6 +29,7 @@ public class DialogueManager : MonoBehaviour
 
     private void Start()
     {
+        dialogContainer.SetActive(false);
         dialogueEntries = new Queue<DialogueEntry>();
         sentences = new Queue<string>();
     }
@@ -37,6 +37,8 @@ public class DialogueManager : MonoBehaviour
 
     public void StartDialogue(Dialogue dialogue) //pass dialogues
     {
+        dialogContainer.SetActive(true);
+
         dialogueEntries.Clear();
         foreach(DialogueEntry dialogueEntry in dialogue.dialogue)
         {
@@ -47,7 +49,7 @@ public class DialogueManager : MonoBehaviour
     private void NextDialogueEntry()
     {
         sentences.Clear();
-        //update avatar text
+        UpdateSpeaker(dialogueEntries.Peek().avatarName);
         foreach (string sentence in dialogueEntries.Peek().sentences)
         {
             sentences.Enqueue(sentence);
@@ -76,23 +78,37 @@ public class DialogueManager : MonoBehaviour
     }
 
 
-    private void UpdateAvatar(string name)
+    private void UpdateSpeaker(string name)
     {
         foreach(AvatarEntry avatar in avatarList.avatarList)
         {
             if(avatar.avatarName == name)
             {
-                avatarTwo.sprite = avatar.avatarImage;
-            }
-            else
-            {
-                Debug.Log("Avatar NOT FOUND");
+                if (avatar.isMain)
+                {
+                    avatar1.SetActive(true);
+                    avatar2.SetActive(false);
+
+                    avatar1.transform.Find("name").GetComponent<TMP_Text>().text = name;
+                    avatar1.transform.Find("avatar").GetComponent<Image>().sprite = avatar.avatarImage;
+                    return;
+                }
+                else
+                {
+                    avatar1.SetActive(false);
+                    avatar2.SetActive(true);
+
+                    avatar2.transform.Find("name").GetComponent<TMP_Text>().text = name;
+                    avatar2.transform.Find("avatar").GetComponent<Image>().sprite = avatar.avatarImage;
+                    return;
+                }
             }
         }
     }
 
     private void EndDialogue()
     {
+        dialogContainer.SetActive(false);
         Debug.Log("END");
     }
 

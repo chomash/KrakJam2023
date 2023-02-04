@@ -13,7 +13,7 @@ public class Dialogue : ScriptableObject
 [System.Serializable]
 public class DialogueEntry
 {
-    public string nameKey;
+    public string avatarName;
 
     [TextArea(2, 3)]
     public string[] sentences;

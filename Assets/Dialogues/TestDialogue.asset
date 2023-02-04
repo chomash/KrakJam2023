@@ -13,16 +13,16 @@ MonoBehaviour:
   m_Name: TestDialogue
   m_EditorClassIdentifier: 
   dialogue:
-  - nameKey: Kurier
+  - avatarName: Kurier
     sentences:
     - one
-  - nameKey: Lel
+  - avatarName: Paul
     sentences:
     - two
-  - nameKey: Thomas
+  - avatarName: Lel
     sentences:
     - three
     - three point one
-  - nameKey: Polel
+  - avatarName: Thomas
     sentences:
     - finale
