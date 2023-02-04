@@ -9,7 +9,7 @@ public class PlayerCharacter : Mover //Mover has update Animation function and s
     private float moveButton, jumpButton;
     // private string JUMP_TAG = "JUMPY"; //tag for floor
     [SerializeField] private float maxSpeed = 7f;
-    private bool inAir = false, isMoving = true/*, canJump = true*/;
+    [HideInInspector]public bool inAir = false, isMoving = true/*, canJump = true*/;
     //private Trigger trigger;
 
     protected void FixedUpdate()
@@ -20,10 +20,6 @@ public class PlayerCharacter : Mover //Mover has update Animation function and s
             jumpButton = Input.GetAxisRaw("Jump");
             Movement();
             Jump();
-            if(rigidBody.velocity.y == 0) ///trzeba zmienic na raycasta lub cos innego, bo sie postac klei do sufitu
-            {
-                inAir = false;
-            }
         }
 
         AnimationUpdate();
@@ -84,9 +80,9 @@ public class PlayerCharacter : Mover //Mover has update Animation function and s
     {
         if (!inAir)
         {
-            inAir = true;
             rigidBody.AddForce(new Vector2(0, jumpForce * jumpButton), ForceMode2D.Impulse);
-  
+            inAir = true;
+
         }
     }
 
