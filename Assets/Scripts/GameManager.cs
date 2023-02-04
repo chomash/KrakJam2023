@@ -5,8 +5,10 @@ using UnityEngine;
 public class GameManager : MonoBehaviour
 {
     public static GameManager instance;
+    public FloatingTextManager floatingTextManager;
     private bool inDialogue = false;
     [SerializeField] private GameObject inventory;
+    public GameObject playerRef { get; private set; }
     public int mushroomCounter { get; private set; }
     void Awake()
     {
@@ -18,6 +20,10 @@ public class GameManager : MonoBehaviour
         {
             instance = this;
         }
+    }
+    private void Start()
+    {
+        playerRef = GameObject.FindGameObjectWithTag("Player");
     }
 
     public void AddShroom(int i)
@@ -43,4 +49,12 @@ public class GameManager : MonoBehaviour
         }
     }
 
+    public void ShowText(string msg, int fontSize, Color color, Vector3 position, Vector3 motion, float duration)
+    {
+        floatingTextManager.Show(msg, fontSize, color, position, motion, duration);
+    }
+    public void ShowText()
+    {
+        floatingTextManager.Show("notImplemented", 24, Color.red, playerRef.transform.position + new Vector3(0,3f,0), new Vector3(0, 1f, 0), 2f);
+    }
 }
