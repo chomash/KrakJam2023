@@ -30,10 +30,8 @@ public class MovableObject : MonoBehaviour
     {
         if (isMoving)
         {
-            Debug.Log("StartMoving");
             if (goUp)
             {
-                Debug.Log("GoUp");
                 fraction += forthSpeed * Time.deltaTime;
                 movingPart.transform.position = Vector3.Lerp(startPos, endPos, fraction);
                 if (fraction > 1)
@@ -48,7 +46,6 @@ public class MovableObject : MonoBehaviour
             }
             if (goDown)
             {
-                Debug.Log("Go");
                 fraction += backSpeed * Time.deltaTime;
                 movingPart.transform.position = Vector3.Lerp(endPos, startPos, fraction);
                 if (fraction > 1)
