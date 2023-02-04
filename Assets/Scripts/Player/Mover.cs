@@ -52,13 +52,13 @@ public class Mover : MonoBehaviour
             animator.SetBool("isFalling", false);
         }
 
-        if (moveDelta.y > 0)
+        if (moveDelta.y > 0.1)
         {
             animator.SetBool("isJumping", true);
             animator.SetBool("isFalling", false);
         }
 
-        if (moveDelta.y < 0)
+        if (moveDelta.y < 0.1)
         {
             animator.SetBool("isJumping", false);
             animator.SetBool("isFalling", true);

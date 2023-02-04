@@ -5,10 +5,12 @@ using UnityEngine;
 public class Trigger : Collidable
 {
     private bool justClicked = false;
+    private bool canShow = true;
     protected override void OnCollide(Collider2D collider)
     {
         if (collider.CompareTag("Player"))
         {
+            ShowE();
             if (Input.GetAxisRaw("Interact") == 1 && !justClicked)
             {
                 justClicked = true;
@@ -18,9 +20,18 @@ public class Trigger : Collidable
             {
                 justClicked = false;
             }
-        }
+        }       
     }
 
+    private void ShowE()
+    {
+        if (canShow)
+        {
+            canShow = false;
+            GameManager.instance.ShowE();
+        }
+
+    }
     protected virtual void DoTrigger()
     {
         Debug.Log("Triggering me");
