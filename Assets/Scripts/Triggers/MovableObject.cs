@@ -12,6 +12,7 @@ public class MovableObject : MonoBehaviour
     private bool isMoving = false;
     [SerializeField] bool canBack;
     [SerializeField] bool doLoop;
+    [SerializeField] bool startAlone;
     private bool goUp, goDown;
     private float fraction = 0;
 
@@ -22,6 +23,7 @@ public class MovableObject : MonoBehaviour
         goDown = false;
         startPos = movingPart.transform.position;
         endPos = endRef.transform.position;
+        isMoving = startAlone;
     }
 
     public void Update()
