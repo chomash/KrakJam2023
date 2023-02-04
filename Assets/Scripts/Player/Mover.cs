@@ -5,7 +5,7 @@ using UnityEngine;
 public class Mover : MonoBehaviour
 {
     #region variables
-    protected BoxCollider2D boxCollider;
+    protected CapsuleCollider2D capsuleCollider;
     protected Rigidbody2D rigidBody;
     protected Vector3 moveDelta;
     protected SpriteRenderer spriteRend;
@@ -19,7 +19,7 @@ public class Mover : MonoBehaviour
 
     protected void Start()
     {
-        boxCollider = GetComponent<BoxCollider2D>();
+        capsuleCollider = GetComponent<CapsuleCollider2D>();
         rigidBody = GetComponent<Rigidbody2D>();
         animator = GetComponent<Animator>();
         spriteRend = GetComponent<SpriteRenderer>();
