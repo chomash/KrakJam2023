@@ -6,6 +6,7 @@ public class GameManager : MonoBehaviour
 {
     public static GameManager instance;
     public FloatingTextManager floatingTextManager;
+    public int sceneToLoad = 0;
     private bool inDialogue = false;
     [SerializeField] private GameObject inventory;
     public GameObject playerRef { get; private set; }
@@ -49,6 +50,10 @@ public class GameManager : MonoBehaviour
         }
     }
 
+    public void ShowE()
+    {
+        ShowText("<b>Wciœnij</b>", 32, Color.white, playerRef.transform.position + new Vector3(0, 5f, 0), Vector3.zero, 3f);
+    }
     public void ShowText(string msg, int fontSize, Color color, Vector3 position, Vector3 motion, float duration)
     {
         floatingTextManager.Show(msg, fontSize, color, position, motion, duration);
