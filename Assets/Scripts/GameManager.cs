@@ -4,7 +4,8 @@ using UnityEngine;
 
 public class GameManager : MonoBehaviour
 {
-    private static GameManager instance;
+    public static GameManager instance;
+    public int mushroomCounter { get; private set; }
     void Awake()
     {
         if (instance != null && instance != this)
@@ -15,6 +16,13 @@ public class GameManager : MonoBehaviour
         {
             instance = this;
         }
+    }
+
+    public void AddShroom(int i)
+    {
+        mushroomCounter += i;
+        Debug.Log("Current Shroom Counter: " + mushroomCounter);
+        //update UI
     }
 
 

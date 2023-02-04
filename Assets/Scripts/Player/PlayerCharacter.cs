@@ -20,7 +20,7 @@ public class PlayerCharacter : Mover //Mover has update Animation function and s
             jumpButton = Input.GetAxisRaw("Jump");
             Movement();
             Jump();
-            if(rigidBody.velocity.y == 0)
+            if(rigidBody.velocity.y == 0) ///trzeba zmienic na raycasta lub cos innego, bo sie postac klei do sufitu
             {
                 inAir = false;
             }
@@ -84,8 +84,9 @@ public class PlayerCharacter : Mover //Mover has update Animation function and s
     {
         if (!inAir)
         {
-            rigidBody.AddForce(new Vector2(0, jumpButton * jumpForce), ForceMode2D.Impulse);
             inAir = true;
+            rigidBody.AddForce(new Vector2(0, jumpForce * jumpButton), ForceMode2D.Impulse);
+  
         }
     }
 

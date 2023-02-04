@@ -2,17 +2,16 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class Item : Collectable
+public class Shroom : Collectable
 {
-    public int amoutOfMe;
+    public int shroomAmount;
     //dodac refke itemku, jesli beda rozne
 
     protected override void OnCollect()
     {
         if(!collected){
-            Debug.Log("Player collected " + gameObject.name + " in an amout of: " + amoutOfMe);
             collected = true;
-            //tutaj skrypt dodawania itemku
+            GameManager.instance.AddShroom(shroomAmount);
             Destroy(gameObject);
         }
     }
