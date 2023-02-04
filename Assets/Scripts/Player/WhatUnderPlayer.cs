@@ -14,10 +14,11 @@ public class WhatUnderPlayer : Collidable
                 collider.CompareTag("Platform"))
                 {
                     player.inAir = false;
+                    player.isGrounded = true;
                 }
         }
 
-        if (player.GetComponent<Rigidbody2D>().velocity.y < 0)
+        if (player.GetComponent<Rigidbody2D>().velocity.y < 0) ///jesli zacznie opadac, to moze próbê skoku
         {
             canJumpAgain = true;
         }        

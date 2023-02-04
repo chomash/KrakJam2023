@@ -4,13 +4,38 @@ using UnityEngine;
 
 
 
-public class PlayerCharacter : Mover //Mover has update Animation function and sprite rotation
+public class PlayerCharacter : MonoBehaviour //Mover has update Animation function and sprite rotation
 {
+    #region variables
+    protected CapsuleCollider2D capsuleCollider;
+    protected Rigidbody2D rigidBody;
+    protected Vector3 moveDelta;
+    protected SpriteRenderer spriteRend;
+    [SerializeField] protected float movementAcceleration = 0.7f;
+    [SerializeField] protected float jumpForce = 7f;
+    [SerializeField] protected float airMovementForce = 0.3f;
+    [SerializeField] protected float slowPower = 0.2f;
+    public bool isGrounded;
+    protected Vector3 baseScale; //just for rotation
+    protected Animator animator;
     private float moveButton, jumpButton;
-    // private string JUMP_TAG = "JUMPY"; //tag for floor
     [SerializeField] private float maxSpeed = 7f;
     [HideInInspector]public bool inAir = false, isMoving = true/*, canJump = true*/;
-    //private Trigger trigger;
+    #endregion
+
+
+
+
+
+    protected void Start()
+    {
+        capsuleCollider = GetComponent<CapsuleCollider2D>();
+        rigidBody = GetComponent<Rigidbody2D>();
+        animator = GetComponent<Animator>();
+        spriteRend = GetComponent<SpriteRenderer>();
+        baseScale = transform.localScale;
+        Debug.Log("name");
+    }
 
     protected void FixedUpdate()
     {
@@ -66,6 +91,10 @@ public class PlayerCharacter : Mover //Mover has update Animation function and s
         {
             transform.parent = collision.transform;
         }
+        if (collision.gameObject.tag == "Platform" || collision.gameObject.tag == "Block")
+        {
+            isGrounded = true;
+        }
     }
     private void OnTriggerExit2D(Collider2D collision)
     {
@@ -82,9 +111,54 @@ public class PlayerCharacter : Mover //Mover has update Animation function and s
         {
             rigidBody.AddForce(new Vector2(0, jumpForce * jumpButton), ForceMode2D.Impulse);
             inAir = true;
+            isGrounded = false;
 
         }
     }
 
 
+
+    protected virtual void AnimationUpdate()
+    {
+
+        moveDelta = new Vector3(rigidBody.velocity.x, rigidBody.velocity.y, 0);
+
+        if (moveDelta.x != 0) //walking/moving direction update
+        {
+            if (moveDelta.x > 0)
+                transform.localScale = new Vector3(baseScale.x, baseScale.y, baseScale.z);
+            else if (moveDelta.x < 0)
+                transform.localScale = new Vector3(-baseScale.x, baseScale.y, baseScale.z);
+
+            animator.SetBool("isWalking", true);
+        }
+        else
+        {
+            animator.SetBool("isWalking", false);
+        }
+
+
+        if (inAir)
+        {
+            animator.SetBool("isGrounded", false);
+            
+            if(moveDelta.y > 0)
+            {
+                animator.SetBool("isJumping", true);
+                animator.SetBool("isFalling", false);
+            }
+            else if (moveDelta.y < 0)
+            {
+                animator.SetBool("isJumping", false);
+                animator.SetBool("isFalling", true);
+            }
+        }
+
+        if (isGrounded)
+        {
+            animator.SetBool("isGrounded", true);
+            Debug.Log("Grounded");
+        }
+
+    }
 }
