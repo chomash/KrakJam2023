@@ -63,6 +63,23 @@ public class PlayerCharacter : Mover //Mover has update Animation function and s
     }
 
 
+    #region stay on platform
+    private void OnTriggerStay2D(Collider2D collision)
+    {
+        if (collision.gameObject.tag == "Platform")
+        {
+            transform.parent = collision.transform;
+        }
+    }
+    private void OnTriggerExit2D(Collider2D collision)
+    {
+     if(collision.gameObject.tag == "Platform")
+        {
+            transform.parent = null;
+        }
+    }
+    #endregion
+
     protected void Jump()
     {
         if (!inAir)
