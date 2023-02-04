@@ -64,7 +64,7 @@ public class PlayerCharacter : Mover //Mover has update Animation function and s
     {
         if (collision.gameObject.tag == "Platform")
         {
-            transform.parent.position = collision.transform.position;
+            transform.parent = collision.transform;
         }
     }
     private void OnTriggerExit2D(Collider2D collision)
