@@ -1,0 +1,25 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c44ce3d2b6973c54d8a773634031e72f, type: 3}
+  m_Name: _AvatarList
+  m_EditorClassIdentifier: 
+  avatarList:
+  - avatarName: Kurier
+    avatarImage: {fileID: 21300000, guid: 79af50be1607ab84ab696a3bc52d8c33, type: 3}
+  - avatarName: Lel
+    avatarImage: {fileID: 21300000, guid: 8bc82c2cc0bb28043a13a34cb4c67717, type: 3}
+  - avatarName: Paul
+    avatarImage: {fileID: 21300000, guid: 5dcabdd5b118d2b44a867b5e28acb7d8, type: 3}
+  - avatarName: Polel
+    avatarImage: {fileID: 21300000, guid: 439d8240a082ccc4dbade2e0551a288e, type: 3}
+  - avatarName: Thomas
+    avatarImage: {fileID: 21300000, guid: 44fec610ac71a224796553e6c279a0ae, type: 3}

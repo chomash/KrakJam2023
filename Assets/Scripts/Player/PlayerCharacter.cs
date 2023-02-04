@@ -6,9 +6,10 @@ using UnityEngine;
 
 public class PlayerCharacter : Mover //Mover has update Animation function and sprite rotation
 {
-    private float moveButton, jumpButton, maxSpeed = 5f;
-    private string JUMP_TAG = "JUMPY";
-    private bool inAir = false, isMoving = true, canJump = true;
+    private float moveButton, jumpButton;
+    // private string JUMP_TAG = "JUMPY"; //tag for floor
+    [SerializeField] private float maxSpeed = 7f;
+    private bool inAir = false, isMoving = true/*, canJump = true*/;
     //private Trigger trigger;
 
     protected void FixedUpdate()
