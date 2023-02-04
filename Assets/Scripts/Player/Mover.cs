@@ -60,6 +60,7 @@ public class Mover : MonoBehaviour
         {
             animator.SetBool("isJumping", false);
             animator.SetBool("isFalling", true);
+            Debug.Log("true spada");
         }
 
     }
