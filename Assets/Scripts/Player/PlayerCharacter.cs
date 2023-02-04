@@ -26,7 +26,7 @@ public class PlayerCharacter : Mover //Mover has update Animation function and s
             }
         }
 
-        //AnimationUpdate();
+        AnimationUpdate();
     }
 
 
