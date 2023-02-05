@@ -144,8 +144,7 @@ public class PlayerCharacter : MonoBehaviour //Mover has update Animation functi
         }
 
 
-        if (inAir)
-        {
+
             animator.SetBool("isGrounded", false);
 
             if (moveDelta.y > 0 && !isGrounded)
@@ -158,7 +157,6 @@ public class PlayerCharacter : MonoBehaviour //Mover has update Animation functi
                 
                 animator.SetBool("isJumping", false);
             }
-        }
 
         if(isGrounded)
         {
