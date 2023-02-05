@@ -19,6 +19,7 @@ public class Inventory : MonoBehaviour
         {
             imageRef.sprite = shroomContainer[shroomNumber];
         }
-        numberToShow.text = shroomNumber.ToString();
+
+        numberToShow.text = shroomNumber.ToString("D3");
     }
 }
