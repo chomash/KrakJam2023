@@ -75,7 +75,7 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
-  m_Sprite: {fileID: 21300000, guid: eb9e4c2d76c636d44866d24005c94396, type: 3}
+  m_Sprite: {fileID: 21300000, guid: 1bda33f4456b1f54cabd02bc12ac60a7, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
@@ -98,20 +98,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5abb8b031b3b7b9478aa33b7b381ae7a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  filter:
-    useTriggers: 0
-    useLayerMask: 0
-    useDepth: 0
-    useOutsideDepth: 0
-    useNormalAngle: 0
-    useOutsideNormalAngle: 0
-    layerMask:
-      serializedVersion: 2
-      m_Bits: 0
-    minDepth: 0
-    maxDepth: 0
-    minNormalAngle: 0
-    maxNormalAngle: 0
   shroomAmount: 1
 --- !u!58 &364094768688118300
 CircleCollider2D:
