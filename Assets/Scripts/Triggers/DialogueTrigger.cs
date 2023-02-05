@@ -6,16 +6,24 @@ public class DialogueTrigger : MonoBehaviour
 {
     [SerializeField] private Dialogue dialogueToStart;
     private bool canInteract;
+    public bool autoInteract = false;
 
 
     private void Update()
     {
-        if (canInteract && Input.GetKeyUp("e") && !GameManager.instance.inDialogue)
+        if (canInteract && Input.GetKeyUp("e") && !GameManager.instance.inDialogue && autoInteract)
         {
             TriggerDialogue();
             GameManager.instance.inDialogue = true;
         }
-        if(Input.GetKeyDown("e") && GameManager.instance.inDialogue)
+        
+        if (canInteract && autoInteract && !GameManager.instance.inDialogue)
+        {
+            TriggerDialogue();
+            GameManager.instance.inDialogue = true;
+        }
+
+        if (Input.GetKeyDown("e") && GameManager.instance.inDialogue)
         {
             DialogueManager.instance.NextSentence();
             if(DialogueManager.instance.dialogueEntries.Count == 0)

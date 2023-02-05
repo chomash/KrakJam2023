@@ -40,14 +40,17 @@ public class PlayerCharacter : MonoBehaviour //Mover has update Animation functi
 
     protected void Update()
     {
-        if (Input.GetKeyDown(KeyCode.Space) && isGrounded)
+        if (!GameManager.instance.inDialogue)
         {
-            Jump();
-        }
-        if (isMoving)
-        {
-            moveButton = Input.GetAxisRaw("Horizontal");
-            Movement();
+            if (Input.GetKeyDown(KeyCode.Space) && isGrounded)
+            {
+                Jump();
+            }
+            if (isMoving)
+            {
+                moveButton = Input.GetAxisRaw("Horizontal");
+                Movement();
+            }
         }
         
 
