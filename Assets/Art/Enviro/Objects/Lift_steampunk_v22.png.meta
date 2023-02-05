@@ -1,5 +1,5 @@
 fileFormatVersion: 2
-guid: 97ba87d5b29a6a648b726d3b8ee592b3
+guid: be8c506f7df05d540a50a6caa0a27fb5
 TextureImporter:
   internalIDToNameTable: []
   externalObjects: {}
@@ -42,7 +42,7 @@ TextureImporter:
   nPOTScale: 0
   lightmap: 0
   compressionQuality: 50
-  spriteMode: 2
+  spriteMode: 1
   spriteExtrude: 1
   spriteMeshType: 1
   alignment: 0
@@ -103,70 +103,7 @@ TextureImporter:
     forceMaximumCompressionQuality_BC6H_BC7: 0
   spriteSheet:
     serializedVersion: 2
-    sprites:
-    - serializedVersion: 2
-      name: Lift_steampunk_v2_0
-      rect:
-        serializedVersion: 2
-        x: 2385
-        y: 1171
-        width: 8
-        height: 6
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: f57b37684b3b1ad4cbe30401bd4989cc
-      internalID: -280069504
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Lift_steampunk_v2_1
-      rect:
-        serializedVersion: 2
-        x: 2533
-        y: 0
-        width: 2079
-        height: 2120
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: db91c419765d82f4ab140d2497d33ebf
-      internalID: 1329634645
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Lift_steampunk_v2_2
-      rect:
-        serializedVersion: 2
-        x: 1825
-        y: 749
-        width: 574
-        height: 390
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: fc78b543fb966f849bf35d6e08840643
-      internalID: -242464335
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
+    sprites: []
     outline: []
     physicsShape: []
     bones: []
@@ -177,10 +114,7 @@ TextureImporter:
     edges: []
     weights: []
     secondaryTextures: []
-    nameFileIdTable:
-      Lift_steampunk_v2_2: -242464335
-      Lift_steampunk_v2_1: 1329634645
-      Lift_steampunk_v2_0: -280069504
+    nameFileIdTable: {}
   spritePackingTag: 
   pSDRemoveMatte: 0
   pSDShowRemoveMatteOption: 0
