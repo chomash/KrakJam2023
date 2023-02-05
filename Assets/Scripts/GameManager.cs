@@ -10,7 +10,7 @@ public class GameManager : MonoBehaviour
     [SerializeField] private GameObject inventory;
     public FloatingTextManager floatingTextManager;
     public int nextSceneToLoad = 0;
-    private bool inDialogue = false;
+    public bool inDialogue = false;
 
     private SpawnPoint spawnPoint;
     

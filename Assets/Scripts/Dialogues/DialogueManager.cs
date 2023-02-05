@@ -34,10 +34,10 @@ public class DialogueManager : MonoBehaviour
         sentences = new Queue<string>();
     }
 
-
     public void StartDialogue(Dialogue dialogue) //pass dialogues
     {
         dialogContainer.SetActive(true);
+        GameManager.instance.inDialogue = true;
 
         dialogueEntries.Clear();
         foreach(DialogueEntry dialogueEntry in dialogue.dialogue)
@@ -109,6 +109,8 @@ public class DialogueManager : MonoBehaviour
     private void EndDialogue()
     {
         dialogContainer.SetActive(false);
+        GameManager.instance.inDialogue = false;
+
         Debug.Log("END");
     }
 

@@ -11,7 +11,7 @@ public class Trigger : Collidable
         if (collider.CompareTag("Player"))
         {
             ShowE();
-            if (Input.GetAxisRaw("Interact") == 1 && !justClicked)
+            if (Input.GetAxisRaw("Interact") == 1 && !justClicked && !GameManager.instance.inDialogue)
             {
                 justClicked = true;
                 DoTrigger();
