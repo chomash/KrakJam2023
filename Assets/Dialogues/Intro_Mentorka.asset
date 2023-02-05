@@ -12,4 +12,16 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 56693a35793706e419a86c31886fbdb9, type: 3}
   m_Name: Intro_Mentorka
   m_EditorClassIdentifier: 
-  dialogue: []
+  dialogue:
+  - avatarName: meee
+    sentences:
+    - e
+  - avatarName: hee
+    sentences:
+    - eee
+  - avatarName: hee
+    sentences:
+    - raz
+  - avatarName: haaaaaaaaaaa
+    sentences:
+    - aaaaaaaaaaaaaaa
