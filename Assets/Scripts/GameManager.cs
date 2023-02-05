@@ -31,13 +31,12 @@ public class GameManager : MonoBehaviour
             instance = this;
         }
     }
-    public void Start()
-    {
-        playerRef = GameObject.FindGameObjectWithTag("Player");
-    }
     public void Update()
     {
         Debug.Log(inventory);
+        if (playerRef == null)
+            playerRef = GameObject.FindGameObjectWithTag("Player");
+
         if (!inDialogue) //open inventory
         {
             if (Input.GetKeyDown(KeyCode.Tab) || Input.GetKeyDown(KeyCode.I))
@@ -70,19 +69,25 @@ public class GameManager : MonoBehaviour
 
     public void DamagePlayer()
     {
+        Debug.Log("KRZYWDA");
         if(spawnPoint != null)
         {
-            playerRef.transform.position = spawnPoint.transform.position+new Vector3(0,0.5f,0);
+            playerRef.transform.position = spawnPoint.transform.position + new Vector3(0,0.5f,0);
         }
-        else Debug.Log("Respawn Point not found");
+        else
+        {
+            Debug.Log("Respawn Point not found");
+        }
+
 
     }
 
 
-    public void ShowE()
+    /*public void ShowE()
     {
         ShowText("<b>Wciœnij</b> E", 32, Color.white, playerRef.transform.position + new Vector3(0, 5f, 0), Vector3.zero, 3f);
-    }
+    }*/
+
     public void ShowText(string msg, int fontSize, Color color, Vector3 position, Vector3 motion, float duration)
     {
         floatingTextManager.Show(msg, fontSize, color, position, motion, duration);

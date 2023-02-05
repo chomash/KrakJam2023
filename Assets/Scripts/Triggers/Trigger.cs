@@ -28,7 +28,7 @@ public class Trigger : Collidable
         if (canShow)
         {
             canShow = false;
-            GameManager.instance.ShowE();
+            //GameManager.instance.ShowE();
         }
 
     }
