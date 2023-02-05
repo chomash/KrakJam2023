@@ -15,6 +15,6 @@ public class DialogueEntry
 {
     public string avatarName;
 
-    [TextArea(2, 3)]
+    [TextArea(2, 4)]
     public string[] sentences;
 }

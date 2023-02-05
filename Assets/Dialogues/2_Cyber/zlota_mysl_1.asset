@@ -1,0 +1,21 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 56693a35793706e419a86c31886fbdb9, type: 3}
+  m_Name: zlota_mysl_1
+  m_EditorClassIdentifier: 
+  dialogue:
+  - avatarName: "Rz\u0105dowy  Ogrodnik"
+    sentences:
+    - "Co\u015B z\u0142ego dzieje si\u0119 z drzewem. Jego kora poszarza\u0142a i
+      sta\u0142a si\u0119 krucha. Wystarczy, \u017Ce przy\u0142o\u017C\u0119 d\u0142o\u0144,
+      a ona odchodzi ca\u0142ymi p\u0142atami. Mog\u0119 j\u0105 bez trudu rozetrze\u0107
+      mi\u0119dzy palcami.\r"

@@ -10,18 +10,14 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 56693a35793706e419a86c31886fbdb9, type: 3}
-  m_Name: Intro_Mentorka
+  m_Name: fragment_przeszlosci_1
   m_EditorClassIdentifier: 
   dialogue:
-  - avatarName: meee
+  - avatarName: Zdeterminowana Naukowczyni
     sentences:
-    - e
-  - avatarName: hee
+    - "Wierz\u0119, \u017Ce ich lepsze zrozumienie pozwoli nam na skuteczniejsze
+      implementowanie rozwi\u0105za\u0144 ratuj\u0105cych ekosystem. Musimy spr\xF3bowa\u0107."
+  - avatarName: "Zestresowany M\u0119\u017Cczyzna"
     sentences:
-    - eee
-  - avatarName: hee
-    sentences:
-    - raz
-  - avatarName: haaaaaaaaaaa
-    sentences:
-    - aaaaaaaaaaaaaaa
+    - "A co jak przyczepi\u0105 si\u0119 do ciebie \u0107woki nawszczepiane pod sam
+      dekiel?\r"

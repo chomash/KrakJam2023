@@ -10,12 +10,8 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 56693a35793706e419a86c31886fbdb9, type: 3}
-  m_Name: Cyber_wyjscie
+  m_Name: Outro
   m_EditorClassIdentifier: 
   dialogue:
   - avatarName: 
     sentences: []
-  - avatarName: Hobo
-    sentences:
-    - Hobo
-    - Hobo

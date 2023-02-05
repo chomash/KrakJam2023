@@ -10,12 +10,12 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 56693a35793706e419a86c31886fbdb9, type: 3}
-  m_Name: Cyber_Grzyb
+  m_Name: fragment_przeszlosci_2
   m_EditorClassIdentifier: 
   dialogue:
-  - avatarName: 
-    sentences: []
-  - avatarName: Hobo
+  - avatarName: Zrozpaczona Aktywistka
     sentences:
-    - Hobo Hobo
-    - Hobo Hobo
+    - "Nie umiem mu pom\xF3c. Nie wiem, jak mog\u0119 mu pom\xF3c. Co zrobi\u0107...
+      ono umiera. \r"
+    - "Umiera na moich oczach. Umiera, a ja czuj\u0119 to w ka\u017Cdym milimetrze
+      mojego cia\u0142a. \r"

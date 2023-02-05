@@ -1,0 +1,30 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 56693a35793706e419a86c31886fbdb9, type: 3}
+  m_Name: Intro
+  m_EditorClassIdentifier: 
+  dialogue:
+  - avatarName: Rhi
+    sentences:
+    - "<i>Czasami chcia\u0142abym zasn\u0105\u0107 i obudzi\u0107 si\u0119 w \u015Bwiecie,
+      gdzie wszystko jest prostsze.</i> \r\n"
+    - "<i>Wszyscy m\xF3wi\u0105, \u017Ce przesadzam. Przejdzie mi. Doceni\u0119,
+      gdy dorosn\u0119. \r</i>"
+    - "<i>Przecie\u017C \u017Cyjemy w najlepszej mo\u017Cliwej wersji rzeczywisto\u015Bci.
+      Pozbawionej niesprawiedliwo\u015Bci spo\u0142ecznej, dyskryminacji, korporacyjnej
+      globalizacji i zatruwaj\u0105cego p\u0142uca smogu.</i>"
+    - "<i>Robi\u0119 g\u0142\u0119boki wdech, wydech, jeszcze jeden wdech, licz\u0119
+      do dziesi\u0119ciu\u2026 Dwudziestu\u2026 Zatrzymuj\u0119 si\u0119 na dwudziestu
+      trzech\u2026 Och.\r</i?"
+    - "<i> Dwadzie\u015Bcia trzy.\r </i>"
+    - <i>Wydech</i>
+    - "<i>Powinnam si\u0119 po\u015Bpieszy\u0107.\r</i>"

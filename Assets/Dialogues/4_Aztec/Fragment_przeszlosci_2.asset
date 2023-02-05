@@ -10,19 +10,12 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 56693a35793706e419a86c31886fbdb9, type: 3}
-  m_Name: TestDialogue
+  m_Name: Fragment_przeszlosci_2
   m_EditorClassIdentifier: 
   dialogue:
-  - avatarName: Kurier
+  - avatarName: "Panikuj\u0105cy Mieszkaniec"
     sentences:
-    - one
-  - avatarName: Paul
+    - "Koniec \u015Bwiata! Niebo wali nam si\u0119 na g\u0142owy! \r"
+  - avatarName: "Panikuj\u0105ca Mieszkanka"
     sentences:
-    - two
-  - avatarName: Lel
-    sentences:
-    - three
-    - three point one
-  - avatarName: Thomas
-    sentences:
-    - finale
+    - "Zmutowane zwierz\u0119ta! Bogowie zes\u0142ali na nas sw\xF3j gniew!\r"

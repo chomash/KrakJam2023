@@ -1,0 +1,55 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 56693a35793706e419a86c31886fbdb9, type: 3}
+  m_Name: Intro_Mentorka
+  m_EditorClassIdentifier: 
+  dialogue:
+  - avatarName: Mentorka
+    sentences:
+    - "Rhi, co takiego powstrzyma\u0142o ci\u0119 przed dotarciem na czas? Ceremonia
+      sko\u0144czy\u0142a si\u0119 dawno temu, a pozostali zd\u0105\u017Cyli wyruszy\u0107.
+      \r\n"
+  - avatarName: Rhi
+    sentences:
+    - "Ja\u2026 Przepraszam, mentorko. To \u017Cadne wyt\u0142umaczenie, ale skoro
+      wszyscy i tak s\u0105 ju\u017C w drodze to chyba nie zosta\u0142o mi nic innego
+      jak przyst\u0105pi\u0107 do rytua\u0142u za rok."
+  - avatarName: Mentorka
+    sentences:
+    - "Za rok nie b\u0119dziesz mia\u0142a dwudziestu trzech lat, Rhizome. Zaczekaj
+      chwil\u0119.\r"
+  - avatarName: Rhi
+    sentences:
+    - "<i>Ech, nie uda mi si\u0119 wywin\u0105\u0107.</i>\r\n"
+  - avatarName: Mentorka
+    sentences:
+    - "Liczba <i>dwa</i> odnosi si\u0119 do komplementarno\u015Bci i r\xF3wnowagi,
+      uczestnictwa i obowi\u0105zku. Liczba <i>trzy</i> \u2013 pomys\u0142owo\u015Bci
+      i wyra\u017Cania siebie, zach\u0119ty i wsparcia. Mo\u017Cesz przypomnie\u0107,
+      co symbolizuj\u0105 razem?\r\n"
+  - avatarName: Rhi
+    sentences:
+    - ...
+    - "Zmian\u0119, komunikacj\u0119 i wsp\xF3lnot\u0119.\r"
+  - avatarName: Mentorka
+    sentences:
+    - "Zatem doskonale wiesz, \u017Ce rytua\u0142 nie tylko wprowadza was w doros\u0142o\u015B\u0107,
+      ale tak\u017Ce \u0142\u0105czy jako spo\u0142eczno\u015B\u0107. Uczy wsp\xF3\u0142zale\u017Cno\u015Bci
+      z elementami ekosfery, od kt\xF3rej jeste\u015Bmy zale\u017Cni. I to w spos\xF3b
+      fundamentalny.\r\n"
+    - "Nie widz\u0119 przeszk\xF3d w tym, aby\u015B do\u0142\u0105czy\u0142a do pozosta\u0142ych.
+      Do\u015Bwiadczenie pokaza\u0142o mi, \u017Ce ka\u017Cde z was ro\u015Bnie i
+      dojrzewa w swoim tempie. Poza tym wci\u0105\u017C powinna\u015B ich dogoni\u0107.
+      \r\n"
+    - "Zanim jednak wyruszysz, za\u0142\xF3\u017C ten talizman. O\u015Bwietli ci
+      drog\u0119, gdy b\u0119dziesz tego najbardziej potrzebowa\u0107. Wejd\u017A
+      do windy a zabierze ci\u0119 do pozosta\u0142ych.\r\n"

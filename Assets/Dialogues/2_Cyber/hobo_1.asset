@@ -1,0 +1,56 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 56693a35793706e419a86c31886fbdb9, type: 3}
+  m_Name: hobo_1
+  m_EditorClassIdentifier: 
+  dialogue:
+  - avatarName: Grzybowy Dziad
+    sentences:
+    - "Archibaldzie, patrz, kolejny niezapowiedziany go\u015B\u0107. Ha, ale z nas
+      farciarze!\r"
+  - avatarName: "Ko\u015Bci Archibalda"
+    sentences:
+    - Hobo Hobo
+  - avatarName: Rhi
+    sentences:
+    - ...
+  - avatarName: Grzybowy Dziad
+    sentences:
+    - "Ten jak zawsze bez manier. Dotrzymasz mi towarzystwa i zapalisz? W\u0142a\u015Bnie
+      nabi\u0142em. \r"
+    - "Nie s\u0105 to jakiej\u015B w\u0105tpliwej natury dopalacze, tylko <i>najmocniejsze
+      zio\u0142a</i> samej Matki Natury, kt\xF3rym uda\u0142o si\u0119 przetrwa\u0107
+      w ruinach tej <i>przekl\u0119tej stechnicyzowanej cywilizacji</i>. \r\n"
+    - "Syntetyczne jedzenie, truj\u0105ce substancje smoliste \u2013 tu tego nie
+      serwujemy. Albo nie nazywam si\u0119 Hobo Dostojny! To jak b\u0119dzie?\r\n"
+  - avatarName: "Z\u0142ociste Bongo"
+    sentences:
+    - "*zaci\u0105gasz si\u0119 z\u0142ocistym bongiem*"
+  - avatarName: Rhi
+    sentences:
+    - "\u0141OOOOOOOOOOOO"
+    - "Hobo, wspomnia\u0142e\u015B o niezapowiedzianych go\u015Bciach. Kto\u015B
+      wcze\u015Bniej tu by\u0142?\r\n"
+  - avatarName: Dostojny Hobo
+    sentences:
+    - "Tak, tak. Ma\u0142a grupka. Bardzo smakowa\u0142y im moje zi\xF3\u0142ka\u2026
+      Pr\xF3bowa\u0142em nam\xF3wi\u0107 jedno z nich do po\u017Cyczenia pojemnika
+      na grzyby od Archibalda, ale uciek\u0142o z krzykiem. A za nim reszta.\r\n"
+    - "Nie dziwi\u0119 si\u0119 im. <i>*szepcze* Sam bym uciek\u0142, gdybym mia\u0142
+      dok\u0105d. Archibald od ostatniego grzybobrania jest strasznym mrukiem</i>.\r\n"
+  - avatarName: Archibald
+    sentences:
+    - ...
+  - avatarName: Dostojny Hobo
+    sentences:
+    - "Potraktuj to jako prezent. Podziel si\u0119 p\xF3\u017Aniej zebranymi grzybkami
+      z przyjaci\xF3\u0142mi. Maj\u0105 <i>magiczne</i> w\u0142a\u015Bciwo\u015Bci. "
