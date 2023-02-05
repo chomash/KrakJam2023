@@ -15,6 +15,7 @@ public class PlayerCharacter : MonoBehaviour //Mover has update Animation functi
     [SerializeField] protected float jumpForce = 7f;
     [SerializeField] protected float airMovementForce = 0.3f;
     [SerializeField] protected float slowPower = 0.2f;
+    [SerializeField] Collider2D sphereCollider;
     public bool isGrounded;
     protected Vector3 baseScale; //just for rotation
     protected Animator animator;
@@ -110,6 +111,7 @@ public class PlayerCharacter : MonoBehaviour //Mover has update Animation functi
 
     protected void Jump()
     {
+       
         if (!inAir)
         {
             inAir = true;
@@ -146,17 +148,19 @@ public class PlayerCharacter : MonoBehaviour //Mover has update Animation functi
         {
             animator.SetBool("isGrounded", false);
 
-            if (moveDelta.y > 0)
-            {
-                animator.SetBool("isJumping", true);
+            if (moveDelta.y > 0 && !isGrounded)
+            { 
+               
+            animator.SetBool("isJumping", true);
             }
             else
             {
+                
                 animator.SetBool("isJumping", false);
             }
         }
 
-        if (isGrounded)
+        if(isGrounded)
         {
             animator.SetBool("isGrounded", true);
             Debug.Log("Grounded");
