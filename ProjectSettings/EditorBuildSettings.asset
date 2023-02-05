@@ -6,6 +6,12 @@ EditorBuildSettings:
   serializedVersion: 2
   m_Scenes:
   - enabled: 1
+    path: Assets/Scenes/MainMap.unity
+    guid: d450c762f0c21924a9051c6661933d4e
+  - enabled: 1
+    path: Assets/Scenes/SceneLoader.unity
+    guid: e5444905709e32e4fa675c45bceb2fa7
+  - enabled: 1
     path: Assets/Scenes/Solarpunk.unity
     guid: 9e852f216c1626f4d96838b8ac69509b
   - enabled: 1
