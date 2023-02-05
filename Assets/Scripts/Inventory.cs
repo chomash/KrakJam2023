@@ -1,27 +1,24 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 using TMPro;
 
 public class Inventory : MonoBehaviour
 {
     private int shroomNumber;
-    public GameObject[] shroomContainer;
+    public Sprite [] shroomContainer;
+    public Image imageRef;
+
     public TMP_Text numberToShow;
     
     private void OnEnable()
     {
         shroomNumber = GameManager.instance.mushroomCounter;
-        
-        for(int i = 0; i < shroomNumber; i++)
+        if (shroomContainer[shroomNumber] != null)
         {
-            if(shroomContainer[i] != null)
-            {
-                shroomContainer[i].SetActive(true);
-            }
+            imageRef.sprite = shroomContainer[shroomNumber];
         }
         numberToShow.text = shroomNumber.ToString();
     }
-
-
 }

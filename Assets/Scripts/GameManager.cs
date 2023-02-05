@@ -68,7 +68,12 @@ public class GameManager : MonoBehaviour
 
     public void DamagePlayer()
     {
-        playerRef.transform.position = spawnPoint.transform.position;
+        if(spawnPoint != null)
+        {
+            playerRef.transform.position = spawnPoint.transform.position+new Vector3(0,0.5f,0);
+        }
+        else Debug.Log("Respawn Point not found");
+
     }
 
 
