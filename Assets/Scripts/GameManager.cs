@@ -4,13 +4,21 @@ using UnityEngine;
 
 public class GameManager : MonoBehaviour
 {
+    #region
     public static GameManager instance;
+
+    [SerializeField] private GameObject inventory;
     public FloatingTextManager floatingTextManager;
     public int sceneToLoad = 0;
     private bool inDialogue = false;
-    [SerializeField] private GameObject inventory;
+
+    private SpawnPoint spawnPoint;
+    
+
     public GameObject playerRef { get; private set; }
     public int mushroomCounter { get; private set; }
+    #endregion
+
     void Awake()
     {
         if (instance != null && instance != this)
@@ -26,12 +34,6 @@ public class GameManager : MonoBehaviour
     {
         playerRef = GameObject.FindGameObjectWithTag("Player");
     }
-
-    public void AddShroom(int i)
-    {
-        mushroomCounter += i;
-    }
-
     public void Update()
     {
         if (!inDialogue) //open inventory
@@ -50,9 +52,29 @@ public class GameManager : MonoBehaviour
         }
     }
 
+    public void AddShroom(int i)
+    {
+        mushroomCounter += i;
+    }
+
+    public void SetSpawnPoint(SpawnPoint newSpawnPoint)
+    {
+        if (spawnPoint != null)
+        {
+            spawnPoint.DeactivateSpawn();
+        }
+        spawnPoint = newSpawnPoint;
+    }
+
+    public void DamagePlayer()
+    {
+        playerRef.transform.position = spawnPoint.transform.position;
+    }
+
+
     public void ShowE()
     {
-        ShowText("<b>Wciœnij</b>", 32, Color.white, playerRef.transform.position + new Vector3(0, 5f, 0), Vector3.zero, 3f);
+        ShowText("<b>Wciœnij</b> E", 32, Color.white, playerRef.transform.position + new Vector3(0, 5f, 0), Vector3.zero, 3f);
     }
     public void ShowText(string msg, int fontSize, Color color, Vector3 position, Vector3 motion, float duration)
     {
