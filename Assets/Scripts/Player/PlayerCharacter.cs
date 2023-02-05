@@ -35,7 +35,6 @@ public class PlayerCharacter : MonoBehaviour //Mover has update Animation functi
         animator = GetComponent<Animator>();
         spriteRend = GetComponent<SpriteRenderer>();
         baseScale = transform.localScale;
-        Debug.Log("name");
     }
 
     protected void Update()
@@ -160,7 +159,6 @@ public class PlayerCharacter : MonoBehaviour //Mover has update Animation functi
         if(isGrounded)
         {
             animator.SetBool("isGrounded", true);
-            Debug.Log("Grounded");
         }
 
     }

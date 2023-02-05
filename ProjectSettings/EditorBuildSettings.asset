@@ -9,7 +9,7 @@ EditorBuildSettings:
     path: Assets/Scenes/SceneLoader.unity
     guid: e5444905709e32e4fa675c45bceb2fa7
   - enabled: 1
-    path: Assets/Scenes/Solarpunk.unity
+    path: Assets/Scenes/Solarpunk_OLD.unity
     guid: ed8dc16088cd84f419364f47c91cffc5
   - enabled: 1
     path: Assets/Scenes/Cyberpunk.unity

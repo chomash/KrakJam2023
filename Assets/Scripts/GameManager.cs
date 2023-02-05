@@ -5,18 +5,19 @@ using UnityEngine;
 public class GameManager : MonoBehaviour
 {
     #region
-    public static GameManager instance;
+    public static GameManager instance { get; private set; }
 
-    [SerializeField] private GameObject inventory;
+
     public FloatingTextManager floatingTextManager;
-    public int nextSceneToLoad = 0;
-    public bool inDialogue = false;
+    [HideInInspector] public int nextSceneToLoad = 0;
+    [HideInInspector] public bool inDialogue = false;
+    [SerializeField] GameObject inventory;
 
     private SpawnPoint spawnPoint;
     
 
     public GameObject playerRef { get; private set; }
-    public int mushroomCounter { get; private set; }
+    public int mushroomCounter = 0;
     #endregion
 
     void Awake()
@@ -30,17 +31,18 @@ public class GameManager : MonoBehaviour
             instance = this;
         }
     }
-    private void Start()
+    public void Start()
     {
         playerRef = GameObject.FindGameObjectWithTag("Player");
     }
     public void Update()
     {
+        Debug.Log(inventory);
         if (!inDialogue) //open inventory
         {
             if (Input.GetKeyDown(KeyCode.Tab) || Input.GetKeyDown(KeyCode.I))
             {
-                if (inventory.activeSelf)
+                if (inventory.activeSelf.Equals(true))
                 {
                     inventory.SetActive(false);
                 }
