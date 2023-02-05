@@ -12,7 +12,7 @@ public class Parallax : MonoBehaviour
 
     #endregion
 
-
+    [SerializeField] float offSet = 3f;
     void Start()
     {
         startpos = transform.position.y;
@@ -26,7 +26,7 @@ public class Parallax : MonoBehaviour
         float temp = (cam.transform.position.y * (1 - parallaxEffect));
         float dist = (cam.transform.position.y * parallaxEffect);
 
-        transform.position = new Vector3(transform.position.x, startpos + dist + 3f,  transform.position.z);
+        transform.position = new Vector3(transform.position.x, startpos + dist + offSet,  transform.position.z);
 
         // if (temp > startpos + length) startpos += length;
         // else if (temp < startpos - length) startpos -= length;
