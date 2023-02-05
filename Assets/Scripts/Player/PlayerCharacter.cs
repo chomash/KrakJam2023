@@ -143,21 +143,17 @@ public class PlayerCharacter : MonoBehaviour //Mover has update Animation functi
             animator.SetBool("isWalking", false);
         }
 
+        animator.SetBool("isGrounded", false);
+        if (moveDelta.y > 0 && !isGrounded)
+        {        
+        animator.SetBool("isJumping", true);
+        }
+        else
+        {      
+            animator.SetBool("isJumping", false);
+        }
 
-
-            animator.SetBool("isGrounded", false);
-
-            if (moveDelta.y > 0 && !isGrounded)
-            { 
-               
-            animator.SetBool("isJumping", true);
-            }
-            else
-            {
-                
-                animator.SetBool("isJumping", false);
-            }
-
+        
         if(isGrounded)
         {
             animator.SetBool("isGrounded", true);

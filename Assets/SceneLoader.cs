@@ -16,7 +16,7 @@ public class SceneLoader : MonoBehaviour
 
     void Start()
     {
-        sceneToLoad = GameManager.instance.sceneToLoad;
+        sceneToLoad = GameManager.instance.nextSceneToLoad;
         MovePlayerAvatar();
     }
     private void Update()
