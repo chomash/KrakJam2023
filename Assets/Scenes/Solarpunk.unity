@@ -523,7 +523,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 605017180}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -21.455353, y: -26.620384, z: -0.13524105}
+  m_LocalPosition: {x: -21.5, y: -26.53, z: -0.13524105}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -547,7 +547,7 @@ GameObject:
   m_Layer: 0
   m_Name: Mentore
   m_TagString: Untagged
-  m_Icon: {fileID: 0}
+  m_Icon: {fileID: -5442936267250999957, guid: 0000000000000000d000000000000000, type: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
@@ -666,7 +666,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e016a7c77c8cdce4da057423c883e276, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  dialogueToStart: {fileID: 0}
+  dialogueToStart: {fileID: 11400000, guid: 2f922b0f4924d8644886d179e38794b9, type: 2}
   autoInteract: 0
 --- !u!1 &727587476
 GameObject:

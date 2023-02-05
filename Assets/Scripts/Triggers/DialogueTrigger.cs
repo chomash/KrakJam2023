@@ -11,7 +11,7 @@ public class DialogueTrigger : MonoBehaviour
 
     private void Update()
     {
-        if (canInteract && Input.GetKeyUp("e") && !GameManager.instance.inDialogue && autoInteract)
+        if (canInteract && Input.GetKeyUp("e") && !GameManager.instance.inDialogue && !autoInteract)
         {
             TriggerDialogue();
             GameManager.instance.inDialogue = true;
