@@ -13,5 +13,21 @@ MonoBehaviour:
   m_Name: Outro
   m_EditorClassIdentifier: 
   dialogue:
-  - avatarName: 
-    sentences: []
+  - avatarName: Rin
+    sentences:
+    - "<i>Pewnych b\u0142\u0119d\xF3w nie da si\u0119 naprawi\u0107, a najgorsza
+      rzecz jaka mog\u0142a si\u0119 zdarzy\u0107, wydarzy\u0142a si\u0119 setki
+      lat temu. \r\n</i>"
+    - "<i>Pradrzewo umiera. \r</i>\n"
+    - "<i>Jako wsp\xF3lnota nie mo\u017Cemy na to pozwoli\u0107. Razem, spleceni
+      w jednej \u017Cywej my\u015Bli i z\u0142\u0105czeni we wsp\xF3lnej nadziei,
+      musimy je piel\u0119gnowa\u0107.\r</i>\n"
+    - "<i>Ju\u017C wkr\xF3tce korzenie naszych sadzonek wnikn\u0105 w ziemi\u0119,
+      penetruj\u0105c g\u0142\u0119bi\u0119 mrocznych czelu\u015Bci wyeksploatowanego
+      przed wiekami \u015Bwiata. Stworz\u0105 rozro\u015Bni\u0119te k\u0142\u0105cze
+      z korzeniami pradawnego drzewa. </i>\n"
+    - "<i>Rozrastaj\u0105ce si\u0119 pnie stan\u0105 si\u0119 mocn\u0105 podpor\u0105
+      i stabilnym \u0142\u0105cznikiem tego, co zakorzenione z tym, co pnie si\u0119
+      ku g\xF3rze. </i>"
+    - "<i>A przynajmniej mamy tak\u0105 nadziej\u0119. Bo tylko ona nam zosta\u0142a.
+      \r</i>\n"
