@@ -110,8 +110,6 @@ public class DialogueManager : MonoBehaviour
     {
         dialogContainer.SetActive(false);
         GameManager.instance.inDialogue = false;
-
-        Debug.Log("END");
     }
 
 }

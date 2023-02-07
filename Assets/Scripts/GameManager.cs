@@ -33,7 +33,6 @@ public class GameManager : MonoBehaviour
     }
     public void Update()
     {
-        Debug.Log(inventory);
         if (playerRef == null)
             playerRef = GameObject.FindGameObjectWithTag("Player");
 

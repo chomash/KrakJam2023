@@ -5,7 +5,7 @@ using UnityEngine;
 public class DialogueTrigger : MonoBehaviour
 {
     [SerializeField] private Dialogue dialogueToStart;
-    private bool canInteract;
+    private bool canInteract = false;
     public bool autoInteract = false;
 
 
@@ -23,7 +23,7 @@ public class DialogueTrigger : MonoBehaviour
             GameManager.instance.inDialogue = true;
         }
 
-        if (Input.GetKeyDown("e") && GameManager.instance.inDialogue)
+        if (Input.GetKeyDown("e") && GameManager.instance.inDialogue && canInteract)
         {
             DialogueManager.instance.NextSentence();
             if(DialogueManager.instance.dialogueEntries.Count == 0)
@@ -46,7 +46,7 @@ public class DialogueTrigger : MonoBehaviour
     {
         if (collision.gameObject.tag == "Player")
         {
-            canInteract = true;
+            canInteract = false;
         }
     }
     public void TriggerDialogue()
