@@ -51,6 +51,10 @@ public class PlayerCharacter : MonoBehaviour //Mover has update Animation functi
                 Movement();
             }
         }
+        else if (GameManager.instance.inDialogue)
+        {
+            rigidBody.velocity = Vector3.zero;
+        }
         
 
         AnimationUpdate();

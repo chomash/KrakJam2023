@@ -13,7 +13,7 @@ MonoBehaviour:
   m_Name: Outro
   m_EditorClassIdentifier: 
   dialogue:
-  - avatarName: Rin
+  - avatarName: Rhi
     sentences:
     - "<i>Pewnych b\u0142\u0119d\xF3w nie da si\u0119 naprawi\u0107, a najgorsza
       rzecz jaka mog\u0142a si\u0119 zdarzy\u0107, wydarzy\u0142a si\u0119 setki

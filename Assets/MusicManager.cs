@@ -8,7 +8,7 @@ public class MusicManager : MonoBehaviour
 
     private void Awake() //singleton
     {
-        DontDestroyOnLoad(gameObject);
+        DontDestroyOnLoad(this);
 
         if (instance != null && instance != this)
         {
