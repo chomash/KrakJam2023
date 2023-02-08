@@ -37,7 +37,7 @@ public class DialogueManager : MonoBehaviour
     public void StartDialogue(Dialogue dialogue) //pass dialogues
     {
         dialogContainer.SetActive(true);
-        GameManager.instance.inDialogue = true;
+        //GameManager.instance.inDialogue = true;
 
         dialogueEntries.Clear();
         foreach(DialogueEntry dialogueEntry in dialogue.dialogue)
