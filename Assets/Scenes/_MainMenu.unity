@@ -2370,6 +2370,18 @@ PrefabInstance:
       propertyPath: m_Name
       value: AudioManager
       objectReference: {fileID: 0}
+    - target: {fileID: 2596495571912349652, guid: f2c1aa52a3d63d041af390854fc05a19, type: 3}
+      propertyPath: musicEffectGoTo
+      value: 0.295
+      objectReference: {fileID: 0}
+    - target: {fileID: 2596495571912349652, guid: f2c1aa52a3d63d041af390854fc05a19, type: 3}
+      propertyPath: musicEffectChangeSpeed
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 2596495571912349653, guid: f2c1aa52a3d63d041af390854fc05a19, type: 3}
+      propertyPath: m_Volume
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 2596495571912349655, guid: f2c1aa52a3d63d041af390854fc05a19, type: 3}
       propertyPath: m_RootOrder
       value: 3

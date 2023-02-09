@@ -36,6 +36,7 @@ public class DialogueManager : MonoBehaviour
 
     public void StartDialogue(Dialogue dialogue) //pass dialogues
     {
+        AudioManager.instance.EffectOn();
         dialogContainer.SetActive(true);
         //GameManager.instance.inDialogue = true;
 
@@ -108,6 +109,7 @@ public class DialogueManager : MonoBehaviour
 
     private void EndDialogue()
     {
+        AudioManager.instance.EffectOff();
         dialogContainer.SetActive(false);
         GameManager.instance.inDialogue = false;
     }
