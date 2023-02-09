@@ -54,7 +54,10 @@ public class GameManager : MonoBehaviour
 
     public void AddShroom(int i)
     {
-        mushroomCounter += i;
+        if (mushroomCounter < 6)
+        {
+            mushroomCounter += i;
+        }
     }
 
     public void SetSpawnPoint(SpawnPoint newSpawnPoint)

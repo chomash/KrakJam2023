@@ -1,20 +1,19 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
-public class TutorialTrigger : Collidable
+public class TutorialTrigger : MonoBehaviour
 {
     [SerializeField] GameObject TutWindow;
 
-    public SpriteRenderer spriteRenderer;
-    protected override void OnCollide(Collider2D collider)
+
+    private void OnTriggerEnter2D(Collider2D collision)
     {
-        if (collider.tag == "Player")
+        Debug.Log("Collided");
+        if (collision.gameObject.tag == "Player")
         {
             TutWindow.SetActive(true);
         }
     }
-
-   
-
 }

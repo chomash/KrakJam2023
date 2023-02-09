@@ -12,7 +12,7 @@ GameObject:
   - component: {fileID: 4281035155996827061}
   - component: {fileID: 4281035155996827060}
   - component: {fileID: 4281035155996827067}
-  - component: {fileID: 4281035155996827064}
+  - component: {fileID: 8037043669448104155}
   m_Layer: 0
   m_Name: KillBox
   m_TagString: Untagged
@@ -134,7 +134,7 @@ Rigidbody2D:
   m_SleepingMode: 1
   m_CollisionDetection: 0
   m_Constraints: 0
---- !u!114 &4281035155996827064
+--- !u!114 &8037043669448104155
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -143,6 +143,6 @@ MonoBehaviour:
   m_GameObject: {fileID: 4281035155996827063}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 0070aa6f1fdd850428698d30c0246406, type: 3}
+  m_Script: {fileID: 11500000, guid: 993c9499ad8db7740a0b48daf2259bd9, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 

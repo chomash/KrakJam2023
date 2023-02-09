@@ -6,29 +6,39 @@ public class DialogueTrigger : MonoBehaviour
 {
     [SerializeField] private Dialogue dialogueToStart;
     private bool canInteract = false;
+    private bool canSpeak = false;
     public bool autoInteract = false;
 
 
     private void Update()
     {
-        if (canInteract && Input.GetKeyDown("e") && !GameManager.instance.inDialogue && !autoInteract)
+        if (GameManager.instance.inDialogue && canSpeak)
         {
-            GameManager.instance.inDialogue = true;
-            TriggerDialogue();
-        }
-        
-        if (canInteract && autoInteract && !GameManager.instance.inDialogue)
-        {
-            GameManager.instance.inDialogue = true;
-            TriggerDialogue();
-        }
-
-        if (Input.GetKeyDown("e") && GameManager.instance.inDialogue && canInteract)
-        {
-            DialogueManager.instance.NextSentence();
-            if(DialogueManager.instance.dialogueEntries.Count == 0)
+            if (Input.GetButtonDown("Interact"))
             {
-                Destroy(GetComponent<DialogueTrigger>());
+                DialogueManager.instance.NextSentence();
+                Debug.Log("beep");
+                if (DialogueManager.instance.dialogueEntries.Count == 0)
+                {
+                    Destroy(GetComponent<DialogueTrigger>());
+                }
+            }
+        }
+        else if (canInteract)
+        {
+            if (autoInteract)
+            {
+                GameManager.instance.inDialogue = true;
+                canSpeak = true;
+                TriggerDialogue();
+                return;
+            }
+            else if (Input.GetAxisRaw("Interact") == 1)
+            {
+                GameManager.instance.inDialogue = true;
+                canSpeak = true;
+                TriggerDialogue();
+                return;
             }
         }
     }

@@ -5,8 +5,8 @@ using UnityEngine.SceneManagement;
 
 public class Ending : MonoBehaviour
 {
-    private void OnEnable()
+    public void FinishGame()
     {
-        SceneManager.LoadScene("MainMap", LoadSceneMode.Single);
+        SceneManager.LoadScene("_MainMenu", LoadSceneMode.Single);
     }
 }

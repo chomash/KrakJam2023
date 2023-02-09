@@ -2,18 +2,17 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class Shroom : Collectable
+public class Shroom : MonoBehaviour
 {
     public int shroomAmount;
     //dodac refke itemku, jesli beda rozne
-
-    protected override void OnCollect()
+    private void OnTriggerEnter2D(Collider2D collision)
     {
-        if (!collected){
-            collected = true;
+        if (collision.gameObject.tag == "Player")
+        {
             GameManager.instance.AddShroom(shroomAmount);
+            Debug.Log("Shroom+");
             Destroy(gameObject);
-            //GameManager.instance.ShowText("Picked <color=#c4c4c4>TEXT HERE</color> shroom: x" +shroomAmount, 24, Color.green, GameManager.instance.playerRef.transform.position + new Vector3(0, 1f, 0), new Vector3(0, 4f, 0), 1f);
         }
     }
 }

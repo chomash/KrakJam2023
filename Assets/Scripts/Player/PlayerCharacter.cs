@@ -41,7 +41,7 @@ public class PlayerCharacter : MonoBehaviour //Mover has update Animation functi
     {
         if (!GameManager.instance.inDialogue)
         {
-            if (Input.GetKeyDown(KeyCode.Space) && isGrounded)
+            if (Input.GetKeyDown(KeyCode.Space))
             {
                 Jump();
             }
@@ -118,7 +118,7 @@ public class PlayerCharacter : MonoBehaviour //Mover has update Animation functi
     protected void Jump()
     {
        
-        if (!inAir)
+        //if (!inAir)
         {
             inAir = true;
             isGrounded = false;

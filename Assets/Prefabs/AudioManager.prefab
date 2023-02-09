@@ -26,7 +26,7 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2596495571912349648}
-  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 40.736702, y: 19.12844, z: 0.1485174}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
@@ -51,6 +51,8 @@ MonoBehaviour:
   - {fileID: 8300000, guid: 6a0222a8bf545a94ea2fb5883dea69e9, type: 3}
   - {fileID: 8300000, guid: a756515630d597243924ec6c1cc6074e, type: 3}
   source: {fileID: 2596495571912349653}
+  lowPass: {fileID: 8947657008519717565}
+  musicEffect: 1
 --- !u!82 &2596495571912349653
 AudioSource:
   m_ObjectHideFlags: 0
@@ -162,7 +164,7 @@ AudioLowPassFilter:
     m_Curve:
     - serializedVersion: 3
       time: 0
-      value: 0.19367895
+      value: 1
       inSlope: 0
       outSlope: 0
       tangentMode: 0

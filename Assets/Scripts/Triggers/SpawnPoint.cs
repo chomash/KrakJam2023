@@ -1,8 +1,9 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
-public class SpawnPoint : Collidable
+public class SpawnPoint : MonoBehaviour
 {
     private Animator animator;
 
@@ -10,9 +11,9 @@ public class SpawnPoint : Collidable
     {
         animator = GetComponent<Animator>();
     }
-    protected override void OnCollide(Collider2D collider)
+    private void OnTriggerEnter2D(Collider2D collision)
     {
-        if (collider.tag == "Player")
+        if (collision.gameObject.tag == "Player")
         {
             ActivateSpawn();
         }
@@ -22,12 +23,10 @@ public class SpawnPoint : Collidable
     {
         GameManager.instance.SetSpawnPoint(this);
         animator.SetBool("isActive", true);
-
     }
 
     public void DeactivateSpawn()
     {
         animator.SetBool("isActive", false);
-
     }
 }
