@@ -14,10 +14,12 @@ public class PlayerCharacter : MonoBehaviour //Mover has update Animation functi
     protected SpriteRenderer spriteRend;
     [SerializeField] protected float movementAcceleration = 0.7f;
     [SerializeField] protected float jumpForce = 10f;
-    [SerializeField] protected float airMovementForce = 0.1f;
+    [SerializeField] protected float airMovementForce = 0.4f;
     [SerializeField] protected float slowPower = 0.2f;
     [SerializeField] private float maxSpeed = 5f;
-    public bool isGrounded, canJump;
+    public bool canDoubleJump = false;
+    private bool isGrounded, canJump, jumpPressed;
+    public int additionalJump = 1;
     protected Vector3 baseScale; //just for rotation
     protected Animator animator;
     private float moveButton;
@@ -39,27 +41,30 @@ public class PlayerCharacter : MonoBehaviour //Mover has update Animation functi
 
     protected void Update()
     {
+        moveButton = Input.GetAxisRaw("Horizontal");
+        if (Input.GetKeyDown(KeyCode.Space))
+        {
+            Jump();
+        }
+        AnimationUpdate();
+    }
+
+
+    protected void FixedUpdate()
+    {
         if (!GameManager.instance.inDialogue)
         {
-            if (Input.GetKeyDown(KeyCode.Space))
-            {
-                Jump();
-            }
+
                 Movement();
         }
         else if (GameManager.instance.inDialogue)
         {
             rigidBody.velocity = Vector3.zero;
         }
-        
-        AnimationUpdate();
     }
-
-
 
     protected void Movement()
     {
-        moveButton = Input.GetAxisRaw("Horizontal");
 
         if (moveButton != 0)
         {
@@ -86,7 +91,20 @@ public class PlayerCharacter : MonoBehaviour //Mover has update Animation functi
             }
         }
     }
-
+    protected void Jump()
+    {
+        if (canJump)
+        {
+            rigidBody.AddForce(new Vector2(0, jumpForce * 1), ForceMode2D.Impulse);
+            canJump = false;
+            additionalJump--;
+        }
+        else if (canDoubleJump && additionalJump > 0)
+        {
+            rigidBody.AddForce(new Vector2(0, jumpForce * 1), ForceMode2D.Impulse);
+            additionalJump--;
+        }
+    }
 
     private void OnCollisionEnter2D(Collision2D collision)
     {
@@ -95,6 +113,7 @@ public class PlayerCharacter : MonoBehaviour //Mover has update Animation functi
         {
             isGrounded = true;
             canJump = true;
+            additionalJump = 1;
         }
     }
     private void OnCollisionStay2D(Collision2D collision)
@@ -108,6 +127,7 @@ public class PlayerCharacter : MonoBehaviour //Mover has update Animation functi
         {
             isGrounded = true;
             canJump = true;
+            additionalJump = 1;
         }
     }
     private void OnCollisionExit2D(Collision2D collision)
@@ -122,23 +142,7 @@ public class PlayerCharacter : MonoBehaviour //Mover has update Animation functi
             transform.parent = null;
         }
     }
-
-
-
-
-
-
-    protected void Jump()
-    {
-        if(canJump)
-        {
-            rigidBody.AddForce(new Vector2(0, jumpForce * 1), ForceMode2D.Impulse);
-            canJump = false;
-        }
-    }
-
-
-
+    
     protected virtual void AnimationUpdate()
     {
 
