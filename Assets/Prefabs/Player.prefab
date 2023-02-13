@@ -10,7 +10,7 @@ GameObject:
   m_Component:
   - component: {fileID: 937219486}
   - component: {fileID: 937219487}
-  m_Layer: 6
+  m_Layer: 2
   m_Name: Light 2D (2)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -121,7 +121,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1324598381}
   - component: {fileID: 1324598382}
-  m_Layer: 0
+  m_Layer: 2
   m_Name: Light 2D (1)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -232,7 +232,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1537430370}
   - component: {fileID: 1537430371}
-  m_Layer: 0
+  m_Layer: 2
   m_Name: Light 2D
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -343,7 +343,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1700193215}
   - component: {fileID: 1700193216}
-  m_Layer: 0
+  m_Layer: 2
   m_Name: Light 2D (1)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -453,7 +453,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 7428135931746148745}
-  m_Layer: 0
+  m_Layer: 2
   m_Name: Body
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -494,7 +494,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1243046700268297408}
-  m_Layer: 0
+  m_Layer: 2
   m_Name: Body_2
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -527,7 +527,7 @@ GameObject:
   - component: {fileID: 3554131288479718205}
   - component: {fileID: 3554131288479718203}
   - component: {fileID: 3554131288479718202}
-  m_Layer: 0
+  m_Layer: 2
   m_Name: MC_Leg_R_3
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -617,8 +617,8 @@ MonoBehaviour:
   m_BoneTransforms:
   - {fileID: 3554131289070147200}
   m_Bounds:
-    m_Center: {x: -0.02043257, y: -0.11760298, z: 0}
-    m_Extent: {x: 0.09669903, y: 0.09220294, z: 0}
+    m_Center: {x: -0.020432875, y: -0.11760322, z: 0}
+    m_Extent: {x: 0.096699014, y: 0.09220294, z: 0}
   m_UseBatching: 1
   m_AlwaysUpdate: 1
   m_AutoRebind: 0
@@ -633,7 +633,7 @@ GameObject:
   - component: {fileID: 3554131288566223581}
   - component: {fileID: 3554131288566223579}
   - component: {fileID: 3554131288566223578}
-  m_Layer: 0
+  m_Layer: 2
   m_Name: MC_Leg_R_1
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -726,8 +726,8 @@ MonoBehaviour:
   m_BoneTransforms:
   - {fileID: 3554131290453965277}
   m_Bounds:
-    m_Center: {x: -0.04657106, y: -0.04787481, z: 0}
-    m_Extent: {x: 0.13637035, y: 0.30157644, z: 0}
+    m_Center: {x: -0.04657425, y: -0.04787293, z: 0}
+    m_Extent: {x: 0.13637002, y: 0.30157617, z: 0}
   m_UseBatching: 1
   m_AlwaysUpdate: 1
   m_AutoRebind: 0
@@ -740,7 +740,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 3554131288667880201}
-  m_Layer: 0
+  m_Layer: 2
   m_Name: Tail_1
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -774,7 +774,7 @@ GameObject:
   - component: {fileID: 3554131288751197680}
   - component: {fileID: 3554131288751197678}
   - component: {fileID: 3554131288751197681}
-  m_Layer: 0
+  m_Layer: 2
   m_Name: MC_Head_C
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -865,7 +865,7 @@ MonoBehaviour:
   m_BoneTransforms:
   - {fileID: 3554131289074609719}
   m_Bounds:
-    m_Center: {x: -0.008439511, y: 0.042225033, z: 0}
+    m_Center: {x: -0.008439988, y: 0.04222563, z: 0}
     m_Extent: {x: 0.4309402, y: 0.44277522, z: 0}
   m_UseBatching: 1
   m_AlwaysUpdate: 1
@@ -879,7 +879,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 3554131288794628787}
-  m_Layer: 0
+  m_Layer: 2
   m_Name: Tail_2
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -911,7 +911,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 3554131288816969104}
-  m_Layer: 0
+  m_Layer: 2
   m_Name: New LimbSolver2D_Target
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -947,7 +947,7 @@ GameObject:
   - component: {fileID: 1474401154}
   - component: {fileID: 1474401155}
   - component: {fileID: 1047761012}
-  m_Layer: 0
+  m_Layer: 2
   m_Name: Player
   m_TagString: Player
   m_Icon: {fileID: 0}
@@ -1055,11 +1055,9 @@ MonoBehaviour:
   jumpForce: 10
   airMovementForce: 0.3
   slowPower: 0.2
-  sphereCollider: {fileID: 0}
-  isGrounded: 0
   maxSpeed: 5
-  inAir: 0
-  isMoving: 1
+  isGrounded: 0
+  canJump: 0
 --- !u!70 &1047761012
 CapsuleCollider2D:
   m_ObjectHideFlags: 0
@@ -1085,7 +1083,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 3554131289070147200}
-  m_Layer: 0
+  m_Layer: 2
   m_Name: Leg_R_3
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1099,7 +1097,7 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 3554131289070147203}
-  m_LocalRotation: {x: -0, y: -0, z: -0.023887584, w: 0.99971473}
+  m_LocalRotation: {x: -0, y: -0, z: -0.023891263, w: 0.99971455}
   m_LocalPosition: {x: 0.5501601, y: -0.010633647, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
@@ -1116,7 +1114,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 3554131289074609719}
-  m_Layer: 0
+  m_Layer: 2
   m_Name: Head_C
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1147,7 +1145,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 3554131289088731881}
-  m_Layer: 0
+  m_Layer: 2
   m_Name: Backpack
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1180,7 +1178,7 @@ GameObject:
   - component: {fileID: 3554131289100512950}
   - component: {fileID: 3554131289100512948}
   - component: {fileID: 8130620392427495764}
-  m_Layer: 0
+  m_Layer: 2
   m_Name: MC_Body
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1274,7 +1272,7 @@ MonoBehaviour:
   - {fileID: 489812839183911314}
   - {fileID: 1243046700268297408}
   m_Bounds:
-    m_Center: {x: 0.02267903, y: 0.017879605, z: 0}
+    m_Center: {x: 0.02267927, y: 0.017879605, z: 0}
     m_Extent: {x: 0.9150003, y: 0.91224027, z: 0}
   m_UseBatching: 1
   m_AlwaysUpdate: 1
@@ -1288,7 +1286,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 3554131289111762914}
-  m_Layer: 0
+  m_Layer: 2
   m_Name: Leg_L_3
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1302,7 +1300,7 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 3554131289111762917}
-  m_LocalRotation: {x: -0, y: -0, z: -0.25121346, w: -0.9679317}
+  m_LocalRotation: {x: -0, y: -0, z: -0.2512145, w: -0.9679315}
   m_LocalPosition: {x: 0.57360023, y: 0.0018028021, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
@@ -1321,7 +1319,7 @@ GameObject:
   - component: {fileID: 3554131289175886993}
   - component: {fileID: 3554131289175886991}
   - component: {fileID: 3554131289175886990}
-  m_Layer: 0
+  m_Layer: 2
   m_Name: MC_Leg_L_2
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1411,8 +1409,8 @@ MonoBehaviour:
   m_BoneTransforms:
   - {fileID: 3554131290232105806}
   m_Bounds:
-    m_Center: {x: 0.024781227, y: -0.073758185, z: 0}
-    m_Extent: {x: 0.21793264, y: 0.33337712, z: 0}
+    m_Center: {x: 0.024782553, y: -0.07375842, z: 0}
+    m_Extent: {x: 0.2179331, y: 0.33337688, z: 0}
   m_UseBatching: 1
   m_AlwaysUpdate: 1
   m_AutoRebind: 0
@@ -1427,7 +1425,7 @@ GameObject:
   - component: {fileID: 3554131289216562147}
   - component: {fileID: 3554131289216562145}
   - component: {fileID: 3554131289216562144}
-  m_Layer: 0
+  m_Layer: 2
   m_Name: MC_Helmet
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1518,7 +1516,7 @@ MonoBehaviour:
   m_BoneTransforms:
   - {fileID: 3554131289752163615}
   m_Bounds:
-    m_Center: {x: 0.0060542524, y: 0.08630586, z: 0}
+    m_Center: {x: 0.0060542524, y: 0.086306155, z: 0}
     m_Extent: {x: 0.45958036, y: 0.74169064, z: 0}
   m_UseBatching: 1
   m_AlwaysUpdate: 1
@@ -1533,7 +1531,7 @@ GameObject:
   m_Component:
   - component: {fileID: 3554131289242380456}
   - component: {fileID: 3554131289242380459}
-  m_Layer: 0
+  m_Layer: 2
   m_Name: Leg_L_LimbSolver2D
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1597,7 +1595,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 3554131289294456112}
-  m_Layer: 0
+  m_Layer: 2
   m_Name: Amulet
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1630,7 +1628,7 @@ GameObject:
   - component: {fileID: 3554131289509167221}
   - component: {fileID: 3554131289509167219}
   - component: {fileID: 3554131289509167218}
-  m_Layer: 0
+  m_Layer: 2
   m_Name: MC_Head_O
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1721,7 +1719,7 @@ MonoBehaviour:
   m_BoneTransforms:
   - {fileID: 3554131289606511003}
   m_Bounds:
-    m_Center: {x: -0.02005741, y: -0.07976794, z: 0}
+    m_Center: {x: -0.02005741, y: -0.07976699, z: 0}
     m_Extent: {x: 0.42526072, y: 0.44203842, z: 0}
   m_UseBatching: 1
   m_AlwaysUpdate: 1
@@ -1735,7 +1733,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 3554131289530552379}
-  m_Layer: 0
+  m_Layer: 2
   m_Name: New LimbSolver2D_Target
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1768,7 +1766,7 @@ GameObject:
   - component: {fileID: 3554131289543970249}
   - component: {fileID: 3554131289543970247}
   - component: {fileID: 3554131289543970246}
-  m_Layer: 0
+  m_Layer: 2
   m_Name: MC_Backpack
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1859,7 +1857,7 @@ MonoBehaviour:
   m_BoneTransforms:
   - {fileID: 3554131289088731881}
   m_Bounds:
-    m_Center: {x: -0.0004349947, y: 0.00376904, z: 0}
+    m_Center: {x: -0.00043523312, y: 0.0037701726, z: 0}
     m_Extent: {x: 0.2991752, y: 0.48614028, z: 0}
   m_UseBatching: 1
   m_AlwaysUpdate: 1
@@ -1873,7 +1871,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 3554131289606511003}
-  m_Layer: 0
+  m_Layer: 2
   m_Name: Head_O
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1908,7 +1906,7 @@ GameObject:
   - component: {fileID: 3554131289628913506}
   - component: {fileID: 3554131289628913504}
   - component: {fileID: 3554131289628913507}
-  m_Layer: 0
+  m_Layer: 2
   m_Name: MC_Leg_L_3
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1998,7 +1996,7 @@ MonoBehaviour:
   m_BoneTransforms:
   - {fileID: 3554131289111762914}
   m_Bounds:
-    m_Center: {x: -0.06047529, y: 0.068949096, z: 0}
+    m_Center: {x: -0.060474873, y: 0.06894957, z: 0}
     m_Extent: {x: 0.09182444, y: 0.099117674, z: 0}
   m_UseBatching: 1
   m_AlwaysUpdate: 1
@@ -2012,7 +2010,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 3554131289747130930}
-  m_Layer: 0
+  m_Layer: 2
   m_Name: Leg_L_1
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -2026,7 +2024,7 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 3554131289747130933}
-  m_LocalRotation: {x: 0, y: 0, z: -0.6751739, w: 0.7376586}
+  m_LocalRotation: {x: 0, y: 0, z: -0.6751727, w: 0.7376597}
   m_LocalPosition: {x: 0.024427643, y: 0.31292358, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
@@ -2044,7 +2042,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 3554131289752163615}
-  m_Layer: 0
+  m_Layer: 2
   m_Name: Helmet
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -2077,7 +2075,7 @@ GameObject:
   - component: {fileID: 3554131289769061670}
   - component: {fileID: 3554131289769061668}
   - component: {fileID: 3554131289769061671}
-  m_Layer: 0
+  m_Layer: 2
   m_Name: MC_Tail
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -2170,8 +2168,8 @@ MonoBehaviour:
   - {fileID: 3554131288794628787}
   - {fileID: 3554131289843529873}
   m_Bounds:
-    m_Center: {x: 0.0026649237, y: 0.046904117, z: 0}
-    m_Extent: {x: 0.6123355, y: 0.47809532, z: 0}
+    m_Center: {x: 0.0026645064, y: 0.04690489, z: 0}
+    m_Extent: {x: 0.61233544, y: 0.47809532, z: 0}
   m_UseBatching: 1
   m_AlwaysUpdate: 1
   m_AutoRebind: 0
@@ -2184,7 +2182,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 3554131289843529873}
-  m_Layer: 0
+  m_Layer: 2
   m_Name: Tail_3
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -2217,7 +2215,7 @@ GameObject:
   - component: {fileID: 3554131289958067672}
   - component: {fileID: 3554131289958067670}
   - component: {fileID: 3554131289958067673}
-  m_Layer: 0
+  m_Layer: 2
   m_Name: MC_Leg_R_2
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -2307,8 +2305,8 @@ MonoBehaviour:
   m_BoneTransforms:
   - {fileID: 3554131290259299202}
   m_Bounds:
-    m_Center: {x: 0.06865718, y: -0.123574615, z: 0}
-    m_Extent: {x: 0.1255088, y: 0.31670332, z: 0}
+    m_Center: {x: 0.06865396, y: -0.123574674, z: 0}
+    m_Extent: {x: 0.12550734, y: 0.31670344, z: 0}
   m_UseBatching: 1
   m_AlwaysUpdate: 1
   m_AutoRebind: 0
@@ -2323,7 +2321,7 @@ GameObject:
   - component: {fileID: 3554131289963890115}
   - component: {fileID: 3554131289963890113}
   - component: {fileID: 3554131289963890112}
-  m_Layer: 0
+  m_Layer: 2
   m_Name: MC_Leg_L_1
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -2416,8 +2414,8 @@ MonoBehaviour:
   m_BoneTransforms:
   - {fileID: 3554131289747130930}
   m_Bounds:
-    m_Center: {x: 0.03169653, y: 0.024916679, z: 0}
-    m_Extent: {x: 0.15281108, y: 0.32184356, z: 0}
+    m_Center: {x: 0.031697452, y: 0.024917454, z: 0}
+    m_Extent: {x: 0.15281123, y: 0.32184353, z: 0}
   m_UseBatching: 1
   m_AlwaysUpdate: 1
   m_AutoRebind: 0
@@ -2431,7 +2429,7 @@ GameObject:
   m_Component:
   - component: {fileID: 3554131290019882987}
   - component: {fileID: 3554131290019882986}
-  m_Layer: 0
+  m_Layer: 2
   m_Name: Leg_R_LimbSolver2D
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -2495,7 +2493,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 3554131290232105806}
-  m_Layer: 0
+  m_Layer: 2
   m_Name: Leg_L_2
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -2509,7 +2507,7 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 3554131290232105809}
-  m_LocalRotation: {x: 0, y: 0, z: -0.31799358, w: 0.9480929}
+  m_LocalRotation: {x: 0, y: 0, z: -0.3179961, w: 0.9480921}
   m_LocalPosition: {x: 0.49129927, y: -0.0022592545, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
@@ -2527,7 +2525,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 3554131290259299202}
-  m_Layer: 0
+  m_Layer: 2
   m_Name: Leg_R_2
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -2541,7 +2539,7 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 3554131290259299205}
-  m_LocalRotation: {x: 0, y: 0, z: -0.02466916, w: 0.9996957}
+  m_LocalRotation: {x: 0, y: 0, z: -0.024661122, w: 0.99969584}
   m_LocalPosition: {x: 0.46714586, y: -0.0022723675, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
@@ -2559,7 +2557,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 3554131290445674983}
-  m_Layer: 0
+  m_Layer: 2
   m_Name: UpperBody
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -2590,7 +2588,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 3554131290453965277}
-  m_Layer: 0
+  m_Layer: 2
   m_Name: Leg_R_1
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -2604,7 +2602,7 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 3554131290453965276}
-  m_LocalRotation: {x: 0, y: 0, z: -0.70599043, w: 0.70822144}
+  m_LocalRotation: {x: 0, y: 0, z: -0.7059935, w: 0.70821834}
   m_LocalPosition: {x: -0.022526396, y: 0.22427708, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
@@ -2624,7 +2622,7 @@ GameObject:
   - component: {fileID: 3554131290464425844}
   - component: {fileID: 3554131290464425842}
   - component: {fileID: 3554131290464425845}
-  m_Layer: 0
+  m_Layer: 2
   m_Name: MC_Amulet
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -2716,7 +2714,7 @@ MonoBehaviour:
   m_BoneTransforms:
   - {fileID: 3554131289294456112}
   m_Bounds:
-    m_Center: {x: 0.005070001, y: 0.015184045, z: 0}
+    m_Center: {x: 0.005070001, y: 0.015185177, z: 0}
     m_Extent: {x: 0.19951013, y: 0.34981522, z: 0}
   m_UseBatching: 1
   m_AlwaysUpdate: 1
@@ -2730,7 +2728,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 489812839183911314}
-  m_Layer: 0
+  m_Layer: 2
   m_Name: Body_1
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -2761,7 +2759,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 6424520035919159146}
-  m_Layer: 0
+  m_Layer: 2
   m_Name: UpperBody
   m_TagString: Untagged
   m_Icon: {fileID: 0}

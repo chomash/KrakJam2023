@@ -1698,6 +1698,18 @@ PrefabInstance:
       propertyPath: m_IsActive
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 1474401155, guid: 698f5cead6748b247a13cceb650b911e, type: 3}
+      propertyPath: maxSpeed
+      value: 5
+      objectReference: {fileID: 0}
+    - target: {fileID: 1474401155, guid: 698f5cead6748b247a13cceb650b911e, type: 3}
+      propertyPath: jumpForce
+      value: 10
+      objectReference: {fileID: 0}
+    - target: {fileID: 1474401155, guid: 698f5cead6748b247a13cceb650b911e, type: 3}
+      propertyPath: airMovementForce
+      value: 0.1
+      objectReference: {fileID: 0}
     - target: {fileID: 1537430369, guid: 698f5cead6748b247a13cceb650b911e, type: 3}
       propertyPath: m_IsActive
       value: 0

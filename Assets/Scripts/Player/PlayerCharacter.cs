@@ -1,5 +1,6 @@
 using System.Collections;
 using System.Collections.Generic;
+using Unity.VisualScripting;
 using UnityEngine;
 
 
@@ -12,16 +13,15 @@ public class PlayerCharacter : MonoBehaviour //Mover has update Animation functi
     protected Vector3 moveDelta;
     protected SpriteRenderer spriteRend;
     [SerializeField] protected float movementAcceleration = 0.7f;
-    [SerializeField] protected float jumpForce = 7f;
-    [SerializeField] protected float airMovementForce = 0.3f;
+    [SerializeField] protected float jumpForce = 10f;
+    [SerializeField] protected float airMovementForce = 0.1f;
     [SerializeField] protected float slowPower = 0.2f;
-    [SerializeField] Collider2D sphereCollider;
-    public bool isGrounded;
+    [SerializeField] private float maxSpeed = 5f;
+    public bool isGrounded, canJump;
     protected Vector3 baseScale; //just for rotation
     protected Animator animator;
     private float moveButton;
-    [SerializeField] private float maxSpeed = 7f;
-    [HideInInspector]public bool inAir = false, isMoving = true;
+
     #endregion
 
 
@@ -45,18 +45,13 @@ public class PlayerCharacter : MonoBehaviour //Mover has update Animation functi
             {
                 Jump();
             }
-            if (isMoving)
-            {
-                moveButton = Input.GetAxisRaw("Horizontal");
                 Movement();
-            }
         }
         else if (GameManager.instance.inDialogue)
         {
             rigidBody.velocity = Vector3.zero;
         }
         
-
         AnimationUpdate();
     }
 
@@ -64,9 +59,11 @@ public class PlayerCharacter : MonoBehaviour //Mover has update Animation functi
 
     protected void Movement()
     {
-        if (moveButton != 0) //during move
+        moveButton = Input.GetAxisRaw("Horizontal");
+
+        if (moveButton != 0)
         {
-            if (!inAir)
+            if (isGrounded)
                 rigidBody.AddForce(new Vector2(moveButton * movementAcceleration, 0), ForceMode2D.Impulse);
             else
             {
@@ -74,57 +71,69 @@ public class PlayerCharacter : MonoBehaviour //Mover has update Animation functi
             }
             rigidBody.velocity = new Vector3(Mathf.Clamp(rigidBody.velocity.x, -maxSpeed, maxSpeed), rigidBody.velocity.y, 0);
         }
-        else //slow down if not in move
+        else //slow down, only grounded
         {
-            if (Mathf.Abs(rigidBody.velocity.x) < 1)
+            if (Mathf.Abs(rigidBody.velocity.x) < 0.5f)
             {
                 rigidBody.velocity = new Vector3(0, rigidBody.velocity.y, 0);
             }
             else
             {
-                if (!inAir)
-                    rigidBody.AddForce(new Vector2(-rigidBody.velocity.x * slowPower, 0), ForceMode2D.Impulse);
-                else
+                if (isGrounded)
                 {
-                    rigidBody.AddForce(new Vector2(-rigidBody.velocity.x * slowPower * airMovementForce, 0), ForceMode2D.Impulse);
+                    rigidBody.AddForce(new Vector2(-rigidBody.velocity.x * slowPower, 0), ForceMode2D.Impulse);
                 }
             }
-
         }
     }
 
 
-    #region stay on platform
-    private void OnTriggerStay2D(Collider2D collision)
+    private void OnCollisionEnter2D(Collision2D collision)
+    {
+        RaycastHit2D hit = Physics2D.Raycast(transform.position, -Vector2.up, 2f);
+        if (hit.collider.tag == "Platform" || collision.gameObject.tag == "Block")
+        {
+            isGrounded = true;
+            canJump = true;
+        }
+    }
+    private void OnCollisionStay2D(Collision2D collision)
     {
         if (collision.gameObject.tag == "Platform")
         {
             transform.parent = collision.transform;
         }
-        if (collision.gameObject.tag == "Platform" || collision.gameObject.tag == "Block")
+        RaycastHit2D hit = Physics2D.Raycast(transform.position, -Vector2.up, 2f);
+        if (hit.collider.tag == "Platform" || collision.gameObject.tag == "Block")
         {
             isGrounded = true;
+            canJump = true;
         }
     }
-    private void OnTriggerExit2D(Collider2D collision)
+    private void OnCollisionExit2D(Collision2D collision)
     {
-     if(collision.gameObject.tag == "Platform")
+        if (collision.gameObject.tag == "Platform" || collision.gameObject.tag == "Block")
+        {
+            isGrounded = false;
+            canJump = false;
+        }
+        if (collision.gameObject.tag == "Platform")
         {
             transform.parent = null;
         }
     }
-    #endregion
+
+
+
+
+
 
     protected void Jump()
     {
-       
-        //if (!inAir)
+        if(canJump)
         {
-            inAir = true;
-            isGrounded = false;
             rigidBody.AddForce(new Vector2(0, jumpForce * 1), ForceMode2D.Impulse);
-            
-
+            canJump = false;
         }
     }
 
@@ -149,7 +158,18 @@ public class PlayerCharacter : MonoBehaviour //Mover has update Animation functi
             animator.SetBool("isWalking", false);
         }
 
-        animator.SetBool("isGrounded", false);
+
+        if (isGrounded)
+        {
+            animator.SetBool("isGrounded", true);
+        }
+        else
+        {
+            animator.SetBool("isGrounded", false);
+
+        }
+
+
         if (moveDelta.y > 0 && !isGrounded)
         {        
         animator.SetBool("isJumping", true);
@@ -160,10 +180,7 @@ public class PlayerCharacter : MonoBehaviour //Mover has update Animation functi
         }
 
         
-        if(isGrounded)
-        {
-            animator.SetBool("isGrounded", true);
-        }
+
 
     }
 }
